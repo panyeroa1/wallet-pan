@@ -3,10 +3,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exchange_sell_confirm_model.dart';
 export 'exchange_sell_confirm_model.dart';
 
@@ -51,8 +54,8 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -44.99999999999999),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -44.99999999999999),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -70,8 +73,8 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(46.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(46.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -99,7 +102,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
-              child: SizedBox(
+              child: Container(
                 height: MediaQuery.sizeOf(context).height * 1.0,
                 child: Stack(
                   children: [
@@ -108,13 +111,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                       updateCallback: () => safeSetState(() {}),
                       child: AppBarWidget(
                         namePage: 'Confirm Sell',
-                        nameCoin: widget.nameCoin,
+                        nameCoin: widget!.nameCoin,
                         moreOptions: false,
                       ),
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -122,9 +125,9 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                             child: Container(
                               width: double.infinity,
                               height: 290.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 30.0, 30.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -139,7 +142,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Text(
                                               'Confirm value entered',
@@ -151,7 +154,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .titleSmallFamily,
-                                                    color: const Color(0x98FFFFFF),
+                                                    color: Color(0x98FFFFFF),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                     useGoogleFonts: GoogleFonts
@@ -182,7 +185,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                           Opacity(
                                             opacity: 0.6,
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -219,7 +222,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                           Container(
                             width: double.infinity,
                             height: 550.0,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0xFF253A80),
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -229,7 +232,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   30.0, 26.0, 30.0, 26.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -239,7 +242,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                     child: Container(
                                       width: double.infinity,
                                       height: 100.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -249,7 +252,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 16.0),
                                             child: Text(
                                               'Informations',
@@ -281,13 +284,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x1AFFFFFF),
+                                                  color: Color(0x1AFFFFFF),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -301,7 +304,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -359,7 +362,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                       fontFamily:
                                                                           FlutterFlowTheme.of(context)
                                                                               .labelLargeFamily,
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x67FFFFFF),
                                                                       letterSpacing:
                                                                           0.0,
@@ -382,13 +385,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              const Color(0x19FFFFFF),
+                                                              Color(0x19FFFFFF),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
                                                                       20.0),
                                                         ),
-                                                        child: const Align(
+                                                        child: Align(
                                                           alignment:
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
@@ -405,7 +408,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -463,7 +466,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                       fontFamily:
                                                                           FlutterFlowTheme.of(context)
                                                                               .labelLargeFamily,
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0x67FFFFFF),
                                                                       letterSpacing:
                                                                           0.0,
@@ -487,13 +490,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x1AFFFFFF),
+                                                  color: Color(0x1AFFFFFF),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(18.0),
+                                                  padding: EdgeInsets.all(18.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -511,7 +514,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmallFamily,
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x66FFFFFF),
                                                                   letterSpacing:
                                                                       0.0,
@@ -548,13 +551,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x1AFFFFFF),
+                                                  color: Color(0x1AFFFFFF),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(18.0),
+                                                  padding: EdgeInsets.all(18.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -572,7 +575,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmallFamily,
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x66FFFFFF),
                                                                   letterSpacing:
                                                                       0.0,
@@ -587,7 +590,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              const Color(0x3400FF29),
+                                                              Color(0x3400FF29),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -595,7 +598,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       14.0,
                                                                       5.0,
@@ -610,7 +613,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmallFamily,
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF00FF29),
                                                                   letterSpacing:
                                                                       0.0,
@@ -630,13 +633,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x1AFFFFFF),
+                                                  color: Color(0x1AFFFFFF),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(18.0),
+                                                  padding: EdgeInsets.all(18.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -654,7 +657,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmallFamily,
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x66FFFFFF),
                                                                   letterSpacing:
                                                                       0.0,
@@ -696,13 +699,13 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                               Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x1AFFFFFF),
+                                                  color: Color(0x1AFFFFFF),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(18.0),
+                                                  padding: EdgeInsets.all(18.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -720,7 +723,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleSmallFamily,
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0x66FFFFFF),
                                                                   letterSpacing:
                                                                       0.0,
@@ -765,7 +768,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                               .titleSmallFamily),
                                                                 ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ],
@@ -778,7 +781,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                     'Homepage',
                                                     extra: <String, dynamic>{
                                                       kTransitionInfoKey:
-                                                          const TransitionInfo(
+                                                          TransitionInfo(
                                                         hasTransition: true,
                                                         transitionType:
                                                             PageTransitionType
@@ -793,11 +796,11 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                 options: FFButtonOptions(
                                                   width: double.infinity,
                                                   height: 60.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -823,7 +826,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                                         .titleMediumFamily),
                                                           ),
                                                   elevation: 0.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -832,7 +835,7 @@ class _ExchangeSellConfirmWidgetState extends State<ExchangeSellConfirmWidget>
                                                           12.0),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(height: 14.0)),
+                                            ].divide(SizedBox(height: 14.0)),
                                           ),
                                         ],
                                       ),

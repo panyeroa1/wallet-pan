@@ -2,9 +2,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'get_started01_model.dart';
 export 'get_started01_model.dart';
 
@@ -116,9 +119,9 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                     Container(
                       width: double.infinity,
                       height: 100.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             30.0, 70.0, 30.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -161,10 +164,10 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: double.infinity,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
@@ -174,13 +177,13 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(30.0),
+                          padding: EdgeInsets.all(30.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Find the best Currency Exchanges',
@@ -203,7 +206,7 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                               Opacity(
                                 opacity: 0.6,
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     'Is the app that gives you access to trading tools that you can actively buy & sell digital currencies in an optimal way.',
@@ -225,7 +228,7 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -266,7 +269,7 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 10.0)),
+                                  ].divide(SizedBox(width: 10.0)),
                                 ).animateOnPageLoad(
                                     animationsMap['rowOnPageLoadAnimation']!),
                               ),
@@ -275,7 +278,7 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                                   context.pushNamed(
                                     'GetStarted02',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 200),
@@ -287,9 +290,9 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 60.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -305,7 +308,7 @@ class _GetStarted01WidgetState extends State<GetStarted01Widget>
                                                     .titleMediumFamily),
                                       ),
                                   elevation: 0.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

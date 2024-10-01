@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'navbar_model.dart';
 export 'navbar_model.dart';
 
@@ -8,7 +10,7 @@ class NavbarWidget extends StatefulWidget {
   const NavbarWidget({
     super.key,
     int? pageIndex,
-  }) : pageIndex = pageIndex ?? 1;
+  }) : this.pageIndex = pageIndex ?? 1;
 
   final int pageIndex;
 
@@ -41,16 +43,16 @@ class _NavbarWidgetState extends State<NavbarWidget> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 100),
+      duration: Duration(milliseconds: 100),
       curve: Curves.easeIn,
       width: double.infinity,
       height: 91.0,
-      constraints: const BoxConstraints(
+      constraints: BoxConstraints(
         minHeight: 76.0,
       ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: const [
+        boxShadow: [
           BoxShadow(
             blurRadius: 20.0,
             color: Color(0x25000000),
@@ -85,7 +87,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
               },
               child: Builder(
                 builder: (context) {
-                  if (widget.pageIndex == 1) {
+                  if (widget!.pageIndex == 1) {
                     return Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -95,19 +97,19 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           size: 24.0,
                         ),
-                      ].divide(const SizedBox(height: 4.0)),
+                      ].divide(SizedBox(height: 4.0)),
                     );
                   } else {
                     return Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(
+                        Icon(
                           FFIcons.khome,
                           color: Color(0x65000000),
                           size: 24.0,
                         ),
-                      ].divide(const SizedBox(height: 4.0)),
+                      ].divide(SizedBox(height: 4.0)),
                     );
                   }
                 },
@@ -118,29 +120,29 @@ class _NavbarWidgetState extends State<NavbarWidget> {
             flex: 2,
             child: Builder(
               builder: (context) {
-                if (widget.pageIndex == 2) {
+                if (widget!.pageIndex == 2) {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.kanalytics,
                         color: Colors.black,
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 } else {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.kanalytics,
                         color: Color(0x65000000),
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 }
               },
@@ -163,7 +165,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                     ),
                   }.withoutNulls,
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.bottomToTop,
                       duration: Duration(milliseconds: 400),
@@ -173,18 +175,18 @@ class _NavbarWidgetState extends State<NavbarWidget> {
               },
               child: Builder(
                 builder: (context) {
-                  if (widget.pageIndex == 3) {
+                  if (widget!.pageIndex == 3) {
                     return Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                         child: Container(
                           width: 65.0,
                           height: 65.0,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).primary,
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -207,7 +209,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                     );
                   } else {
                     return Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: 65.0,
                         height: 65.0,
@@ -215,7 +217,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           borderRadius: BorderRadius.circular(7.0),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           FFIcons.kexchange,
                           color: Colors.white,
                           size: 24.0,
@@ -231,29 +233,29 @@ class _NavbarWidgetState extends State<NavbarWidget> {
             flex: 2,
             child: Builder(
               builder: (context) {
-                if (widget.pageIndex == 4) {
+                if (widget!.pageIndex == 4) {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.khour,
                         color: Colors.black,
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 } else {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.khour,
                         color: Color(0x66000000),
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 }
               },
@@ -263,38 +265,38 @@ class _NavbarWidgetState extends State<NavbarWidget> {
             flex: 2,
             child: Builder(
               builder: (context) {
-                if (widget.pageIndex == 5) {
+                if (widget!.pageIndex == 5) {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.kuser,
                         color: Colors.black,
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 } else {
                   return Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         FFIcons.kuser,
                         color: Color(0x66000000),
                         size: 24.0,
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   );
                 }
               },
             ),
           ),
         ]
-            .divide(const SizedBox(width: 8.0))
-            .addToStart(const SizedBox(width: 14.0))
-            .addToEnd(const SizedBox(width: 14.0)),
+            .divide(SizedBox(width: 8.0))
+            .addToStart(SizedBox(width: 14.0))
+            .addToEnd(SizedBox(width: 14.0)),
       ),
     );
   }

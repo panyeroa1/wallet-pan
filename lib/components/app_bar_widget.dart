@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'app_bar_model.dart';
 export 'app_bar_model.dart';
 
@@ -12,8 +13,8 @@ class AppBarWidget extends StatefulWidget {
     String? namePage,
     this.nameCoin,
     bool? moreOptions,
-  })  : namePage = namePage ?? 'home',
-        moreOptions = moreOptions ?? true;
+  })  : this.namePage = namePage ?? 'home',
+        this.moreOptions = moreOptions ?? true;
 
   final String namePage;
   final String? nameCoin;
@@ -60,7 +61,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(30.0, 50.0, 30.0, 20.0),
+        padding: EdgeInsetsDirectional.fromSTEB(30.0, 50.0, 30.0, 20.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,10 +85,10 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               children: [
                 Builder(
                   builder: (context) {
-                    if (widget.nameCoin == 'bitcoin') {
+                    if (widget!.nameCoin == 'bitcoin') {
                       return Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(24.0),
                           child: SvgPicture.asset(
@@ -100,14 +101,14 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                       );
                     } else {
                       return Container(
-                        decoration: const BoxDecoration(),
+                        decoration: BoxDecoration(),
                       );
                     }
                   },
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget.namePage,
+                    widget!.namePage,
                     'Home',
                   ),
                   style: FlutterFlowTheme.of(context).titleMedium.override(
@@ -124,7 +125,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             ),
             Builder(
               builder: (context) {
-                if (widget.moreOptions) {
+                if (widget!.moreOptions) {
                   return Icon(
                     Icons.more_vert,
                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -134,7 +135,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   return Container(
                     width: 26.0,
                     height: 26.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                   );
                 }
               },
