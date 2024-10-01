@@ -2,12 +2,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'get_started03_model.dart';
 export 'get_started03_model.dart';
 
@@ -81,6 +78,8 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -118,9 +117,9 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                   children: [
                     Container(
                       width: double.infinity,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             30.0, 70.0, 30.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -139,13 +138,13 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(30.0),
@@ -153,13 +152,13 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(30.0),
+                          padding: const EdgeInsets.all(30.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Optimize Your Digital Currency Transactions',
@@ -182,7 +181,7 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                               Opacity(
                                 opacity: 0.6,
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     'Use our app to access advanced trading tools that allow you to buy and sell digital currencies in the most effective manner.',
@@ -204,7 +203,7 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -245,7 +244,7 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                                             BorderRadius.circular(18.0),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 10.0)),
                                 ).animateOnPageLoad(
                                     animationsMap['rowOnPageLoadAnimation']!),
                               ),
@@ -254,7 +253,7 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                                   context.pushNamed(
                                     'Login',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.rightToLeft,
@@ -267,9 +266,9 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 60.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -285,7 +284,7 @@ class _GetStarted03WidgetState extends State<GetStarted03Widget>
                                                     .titleMediumFamily),
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

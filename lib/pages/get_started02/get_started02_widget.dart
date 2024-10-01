@@ -2,12 +2,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'get_started02_model.dart';
 export 'get_started02_model.dart';
 
@@ -81,6 +78,8 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -119,9 +118,9 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                     Container(
                       width: double.infinity,
                       height: 100.0,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             30.0, 70.0, 30.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -164,13 +163,13 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(30.0),
@@ -178,13 +177,13 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(30.0),
+                          padding: const EdgeInsets.all(30.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Discover Top Crypto Trading Platforms',
@@ -207,7 +206,7 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                               Opacity(
                                 opacity: 0.6,
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 20.0),
                                   child: Text(
                                     'Provides you with essential trading tools, enabling you to actively engage in buying and selling digital currencies.',
@@ -229,7 +228,7 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -270,7 +269,7 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 10.0)),
                                 ).animateOnPageLoad(
                                     animationsMap['rowOnPageLoadAnimation']!),
                               ),
@@ -279,7 +278,7 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                                   context.pushNamed(
                                     'GetStarted03',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 200),
@@ -291,9 +290,9 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 60.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -309,7 +308,7 @@ class _GetStarted02WidgetState extends State<GetStarted02Widget>
                                                     .titleMediumFamily),
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

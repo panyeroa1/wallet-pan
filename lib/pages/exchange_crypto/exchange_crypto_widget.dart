@@ -5,12 +5,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'exchange_crypto_model.dart';
 export 'exchange_crypto_model.dart';
 
@@ -18,7 +15,7 @@ class ExchangeCryptoWidget extends StatefulWidget {
   const ExchangeCryptoWidget({
     super.key,
     String? nameCoin,
-  }) : this.nameCoin = nameCoin ?? 'Name Coin';
+  }) : nameCoin = nameCoin ?? 'Name Coin';
 
   final String nameCoin;
 
@@ -54,8 +51,8 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -44.99999999999999),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -44.99999999999999),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -73,8 +70,8 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -44.99999999999999),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -44.99999999999999),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -92,8 +89,8 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -44.99999999999999),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -44.99999999999999),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -111,8 +108,8 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(50.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(50.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -130,12 +127,14 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(50.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(50.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -159,7 +158,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.sizeOf(context).height * 1.0,
                 child: Stack(
                   children: [
@@ -168,37 +167,37 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                       updateCallback: () => safeSetState(() {}),
                       child: AppBarWidget(
                         namePage: 'Bitcoin',
-                        nameCoin: widget!.nameCoin,
+                        nameCoin: widget.nameCoin,
                         moreOptions: true,
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 30.0, 0.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: 400.0,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: Color(0x1A5076FF),
+                                  color: const Color(0x1A5076FF),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 18.0, 0.0, 18.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 10.0),
                                         child: Text(
                                           'Price now',
@@ -208,7 +207,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmallFamily,
-                                                color: Color(0x98FFFFFF),
+                                                color: const Color(0x98FFFFFF),
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
                                                 useGoogleFonts: GoogleFonts
@@ -245,7 +244,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 2.0),
                                             child: Text(
                                               'BTC',
@@ -270,10 +269,10 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                       ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 8.0)),
+                                        ].divide(const SizedBox(width: 8.0)),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           '+72.35 (+0.44%)',
@@ -283,7 +282,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmallFamily,
-                                                color: Color(0xFF00E525),
+                                                color: const Color(0xFF00E525),
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
                                                 useGoogleFonts: GoogleFonts
@@ -302,23 +301,23 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                   'containerOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 30.0, 20.0),
                               child: Container(
                                 width: double.infinity,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: 400.0,
                                 ),
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Container(
                                       width: double.infinity,
                                       height: 37.0,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: FlutterFlowChoiceChips(
-                                        options: [
+                                        options: const [
                                           ChipData('1D'),
                                           ChipData('1W'),
                                           ChipData('1M'),
@@ -347,17 +346,17 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                 context)
                                                             .titleSmallFamily),
                                               ),
-                                          iconColor: Color(0x00000000),
+                                          iconColor: const Color(0x00000000),
                                           iconSize: 18.0,
                                           labelPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 4.0, 10.0, 4.0),
                                           elevation: 4.0,
                                           borderRadius:
                                               BorderRadius.circular(5.0),
                                         ),
                                         unselectedChipStyle: ChipStyle(
-                                          backgroundColor: Color(0x00000000),
+                                          backgroundColor: const Color(0x00000000),
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
                                               .titleSmall
@@ -365,7 +364,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmallFamily,
-                                                color: Color(0xCDFFFFFF),
+                                                color: const Color(0xCDFFFFFF),
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
                                                 useGoogleFonts: GoogleFonts
@@ -375,7 +374,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                 context)
                                                             .titleSmallFamily),
                                               ),
-                                          iconColor: Color(0x00000000),
+                                          iconColor: const Color(0x00000000),
                                           iconSize: 18.0,
                                           elevation: 0.0,
                                           borderRadius:
@@ -396,20 +395,20 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                       ).animateOnPageLoad(animationsMap[
                                           'choiceChipsOnPageLoadAnimation']!),
                                     ),
-                                  ].divide(SizedBox(height: 26.0)),
+                                  ].divide(const SizedBox(height: 26.0)),
                                 ),
                               ),
                             ),
                             Container(
                               width: double.infinity,
-                              constraints: BoxConstraints(
+                              constraints: const BoxConstraints(
                                 maxWidth: 400.0,
                               ),
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Stack(
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-0.82, 0.0),
+                                    alignment: const AlignmentDirectional(-0.82, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -562,11 +561,11 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                 ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 26.0)),
+                                      ].divide(const SizedBox(height: 26.0)),
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         100.0, 0.0, 0.0, 0.0),
                                     child: SingleChildScrollView(
                                       scrollDirection: Axis.horizontal,
@@ -753,7 +752,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                               ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ],
                                           ),
@@ -766,14 +765,14 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                             ).animateOnPageLoad(animationsMap[
                                 'containerOnPageLoadAnimation2']!),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(0.0),
                                     bottomRight: Radius.circular(0.0),
                                     topLeft: Radius.circular(30.0),
@@ -781,13 +780,13 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 26.0, 30.0, 110.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 20.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -823,7 +822,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -837,19 +836,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x3400E525),
+                                                    color: const Color(0x3400E525),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeUp,
                                                     color: Color(0xFF00E525),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -894,7 +893,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -923,7 +922,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFF00E525),
+                                                    color: const Color(0xFF00E525),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -939,7 +938,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -953,19 +952,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x32FF4343),
+                                                    color: const Color(0x32FF4343),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeDown,
                                                     color: Color(0xFFFF4343),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1010,7 +1009,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1039,7 +1038,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFFFF3030),
+                                                    color: const Color(0xFFFF3030),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1055,7 +1054,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1069,19 +1068,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x3400E525),
+                                                    color: const Color(0x3400E525),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeUp,
                                                     color: Color(0xFF00E525),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1126,7 +1125,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1155,7 +1154,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFF00E525),
+                                                    color: const Color(0xFF00E525),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1171,7 +1170,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1185,19 +1184,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x32FF4343),
+                                                    color: const Color(0x32FF4343),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeDown,
                                                     color: Color(0xFFFF4343),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1242,7 +1241,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1271,7 +1270,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFFFF3030),
+                                                    color: const Color(0xFFFF3030),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1287,7 +1286,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1301,19 +1300,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x3400E525),
+                                                    color: const Color(0x3400E525),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeUp,
                                                     color: Color(0xFF00E525),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1358,7 +1357,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1387,7 +1386,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFF00E525),
+                                                    color: const Color(0xFF00E525),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1403,7 +1402,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1417,19 +1416,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x32FF4343),
+                                                    color: const Color(0x32FF4343),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeDown,
                                                     color: Color(0xFFFF4343),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1474,7 +1473,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1503,7 +1502,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFFFF3030),
+                                                    color: const Color(0xFFFF3030),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1519,7 +1518,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1533,19 +1532,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x3400E525),
+                                                    color: const Color(0x3400E525),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeUp,
                                                     color: Color(0xFF00E525),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1590,7 +1589,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1619,7 +1618,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFF00E525),
+                                                    color: const Color(0xFF00E525),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1635,7 +1634,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1649,19 +1648,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                   width: 60.0,
                                                   height: 60.0,
                                                   decoration: BoxDecoration(
-                                                    color: Color(0x3400E525),
+                                                    color: const Color(0x3400E525),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             10.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     FFIcons.ktradeUp,
                                                     color: Color(0xFF00E525),
                                                     size: 24.0,
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -1706,7 +1705,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .titleMediumFamily,
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0x66000000),
                                                                   letterSpacing:
                                                                       0.0,
@@ -1735,7 +1734,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .bodyLargeFamily,
-                                                    color: Color(0xFF00E525),
+                                                    color: const Color(0xFF00E525),
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -1762,19 +1761,19 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                 width: 60.0,
                                                 height: 60.0,
                                                 decoration: BoxDecoration(
-                                                  color: Color(0x32FF4343),
+                                                  color: const Color(0x32FF4343),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10.0),
                                                 ),
-                                                child: Icon(
+                                                child: const Icon(
                                                   FFIcons.ktradeDown,
                                                   color: Color(0xFFFF4343),
                                                   size: 24.0,
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 0.0, 0.0),
                                                 child: Column(
@@ -1818,7 +1817,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                                 fontFamily: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleMediumFamily,
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x66000000),
                                                                 letterSpacing:
                                                                     0.0,
@@ -1846,7 +1845,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .bodyLargeFamily,
-                                                  color: Color(0xFFFF3030),
+                                                  color: const Color(0xFFFF3030),
                                                   fontSize: 18.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
@@ -1871,11 +1870,11 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Container(
                         width: double.infinity,
                         height: 120.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: [Color(0x00FFFFFF), Colors.white],
                             stops: [0.0, 1.0],
@@ -1884,7 +1883,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 30.0, 30.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -1897,17 +1896,17 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                     print('Button pressed ...');
                                   },
                                   text: 'Buy',
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FFIcons.karrowUp,
                                     size: 24.0,
                                   ),
                                   options: FFButtonOptions(
                                     height: 60.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF38CE50),
+                                    color: const Color(0xFF38CE50),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
@@ -1923,7 +1922,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                       .titleMediumFamily),
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -1937,7 +1936,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                     context.pushNamed(
                                       'ExchangeCryptoSell',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.bottomToTop,
@@ -1947,17 +1946,17 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                     );
                                   },
                                   text: 'Sell',
-                                  icon: Icon(
+                                  icon: const Icon(
                                     FFIcons.karrowDown,
                                     size: 24.0,
                                   ),
                                   options: FFButtonOptions(
                                     height: 60.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFFFF6262),
+                                    color: const Color(0xFFFF6262),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
@@ -1973,7 +1972,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                                       .titleMediumFamily),
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -1981,7 +1980,7 @@ class _ExchangeCryptoWidgetState extends State<ExchangeCryptoWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(width: 20.0)),
+                            ].divide(const SizedBox(width: 20.0)),
                           ),
                         ),
                       ).animateOnPageLoad(

@@ -3,14 +3,10 @@ import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'exchange_model.dart';
 export 'exchange_model.dart';
 
@@ -18,7 +14,7 @@ class ExchangeWidget extends StatefulWidget {
   const ExchangeWidget({
     super.key,
     int? pageIndex,
-  }) : this.pageIndex = pageIndex ?? 3;
+  }) : pageIndex = pageIndex ?? 3;
 
   final int pageIndex;
 
@@ -54,8 +50,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -73,8 +69,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -92,8 +88,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -111,8 +107,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -130,8 +126,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -149,8 +145,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -168,8 +164,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -187,8 +183,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 250.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -206,8 +202,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 250.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -225,8 +221,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -244,8 +240,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -263,8 +259,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 350.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -282,8 +278,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 350.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -301,8 +297,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -320,8 +316,8 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -339,12 +335,14 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
             curve: Curves.easeInOut,
             delay: 450.0.ms,
             duration: 600.0.ms,
-            begin: Offset(40.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(40.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -366,18 +364,18 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              decoration: BoxDecoration(),
-              child: Container(
+              decoration: const BoxDecoration(),
+              child: SizedBox(
                 width: double.infinity,
                 height: MediaQuery.sizeOf(context).height * 1.0,
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: wrapWithModel(
                         model: _model.appBarModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: AppBarWidget(
+                        child: const AppBarWidget(
                           namePage: 'Exchange',
                           moreOptions: true,
                         ),
@@ -385,17 +383,17 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 30.0, 0.0),
                               child: Container(
                                 width: double.infinity,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
@@ -422,7 +420,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .labelLargeFamily,
-                                            color: Color(0xFF62AAFF),
+                                            color: const Color(0xFF62AAFF),
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: GoogleFonts.asMap()
@@ -437,11 +435,11 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 30.0, 120.0),
                               child: Container(
                                 width: double.infinity,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -460,7 +458,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                             ),
                                           }.withoutNulls,
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
+                                            kTransitionInfoKey: const TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -477,12 +475,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                         children: [
                                           Container(
                                             width: 110.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 0.0),
                                                   child: ClipRRect(
@@ -535,7 +533,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                 fontFamily: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelLargeFamily,
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x67FFFFFF),
                                                                 letterSpacing:
                                                                     0.0,
@@ -566,9 +564,9 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           ),
                                           Container(
                                             width: 110.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             alignment:
-                                                AlignmentDirectional(1.0, 0.0),
+                                                const AlignmentDirectional(1.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -612,7 +610,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                 fontFamily: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelLargeFamily,
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0x67FFFFFF),
                                                                 letterSpacing:
                                                                     0.0,
@@ -638,7 +636,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -650,12 +648,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -707,7 +705,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -739,7 +737,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -777,7 +775,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -800,7 +798,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -812,12 +810,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -869,7 +867,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -901,7 +899,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -939,7 +937,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -962,7 +960,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -974,12 +972,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -1031,7 +1029,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1063,7 +1061,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1101,7 +1099,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1124,7 +1122,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -1136,12 +1134,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -1193,7 +1191,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1225,7 +1223,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1263,7 +1261,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1286,7 +1284,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -1298,12 +1296,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -1355,7 +1353,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1387,7 +1385,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1425,7 +1423,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1448,7 +1446,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -1460,12 +1458,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -1517,7 +1515,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1549,7 +1547,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1587,7 +1585,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1610,7 +1608,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                     Container(
                                       width: double.infinity,
                                       height: 1.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0x33FFFFFF),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
@@ -1622,12 +1620,12 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       children: [
                                         Container(
                                           width: 110.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: ClipRRect(
@@ -1679,7 +1677,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1711,7 +1709,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                           children: [
                                             Container(
                                               width: 110.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1749,7 +1747,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                                                       context)
                                                                   .labelLargeFamily,
                                                           color:
-                                                              Color(0x67FFFFFF),
+                                                              const Color(0x67FFFFFF),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1769,7 +1767,7 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                                       ],
                                     ).animateOnPageLoad(animationsMap[
                                         'rowOnPageLoadAnimation9']!),
-                                  ].divide(SizedBox(height: 26.0)),
+                                  ].divide(const SizedBox(height: 26.0)),
                                 ),
                               ),
                             ),
@@ -1778,11 +1776,11 @@ class _ExchangeWidgetState extends State<ExchangeWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: wrapWithModel(
                         model: _model.navbarModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: NavbarWidget(
+                        child: const NavbarWidget(
                           pageIndex: 3,
                         ),
                       ),

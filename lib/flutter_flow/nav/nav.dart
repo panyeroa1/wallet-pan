@@ -1,20 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -79,39 +72,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomepageWidget() : GetStarted01Widget(),
+          appStateNotifier.loggedIn ? const HomepageWidget() : const GetStarted01Widget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? HomepageWidget()
-              : GetStarted01Widget(),
+              ? const HomepageWidget()
+              : const GetStarted01Widget(),
         ),
         FFRoute(
           name: 'GetStarted01',
           path: '/getStarted01',
-          builder: (context, params) => GetStarted01Widget(),
+          builder: (context, params) => const GetStarted01Widget(),
         ),
         FFRoute(
           name: 'GetStarted02',
           path: '/getStarted02',
-          builder: (context, params) => GetStarted02Widget(),
+          builder: (context, params) => const GetStarted02Widget(),
         ),
         FFRoute(
           name: 'GetStarted03',
           path: '/getStarted03',
-          builder: (context, params) => GetStarted03Widget(),
+          builder: (context, params) => const GetStarted03Widget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'Register',
           path: '/register',
-          builder: (context, params) => RegisterWidget(),
+          builder: (context, params) => const RegisterWidget(),
         ),
         FFRoute(
           name: 'Homepage',
@@ -399,7 +392,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

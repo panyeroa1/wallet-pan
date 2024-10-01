@@ -2,12 +2,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'register_model.dart';
 export 'register_model.dart';
 
@@ -55,8 +52,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 49.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 49.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -74,8 +71,8 @@ class _RegisterWidgetState extends State<RegisterWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 49.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 49.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -93,12 +90,14 @@ class _RegisterWidgetState extends State<RegisterWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 49.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 49.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -116,7 +115,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(30.0, 70.0, 30.0, 40.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(30.0, 70.0, 30.0, 40.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +130,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
@@ -143,7 +142,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                       child: Text(
                         'Register account',
                         style:
@@ -159,7 +158,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 26.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 26.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +197,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                           .bodyMediumFamily),
                                 ),
                           ),
-                        ].divide(SizedBox(width: 8.0)),
+                        ].divide(const SizedBox(width: 8.0)),
                       ),
                     ),
                     Form(
@@ -208,7 +207,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -217,7 +216,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                 Opacity(
                                   opacity: 0.4,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: Text(
                                       'Name',
@@ -237,7 +236,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                     ),
                                   ),
                                 ),
-                                Container(
+                                SizedBox(
                                   width: double.infinity,
                                   child: TextFormField(
                                     controller: _model.textController1,
@@ -254,7 +253,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: Color(0x6514181B),
+                                            color: const Color(0x6514181B),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -264,7 +263,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                                         .bodyMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFFECECEC),
                                           width: 1.0,
                                         ),
@@ -299,7 +298,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               14.0, 22.0, 14.0, 22.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -324,7 +323,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                 animationsMap['columnOnPageLoadAnimation1']!),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -333,7 +332,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                 Opacity(
                                   opacity: 0.4,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
                                     child: Text(
                                       'E-mail',
@@ -353,7 +352,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                     ),
                                   ),
                                 ),
-                                Container(
+                                SizedBox(
                                   width: double.infinity,
                                   child: TextFormField(
                                     controller: _model.textController2,
@@ -370,7 +369,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
-                                            color: Color(0x6514181B),
+                                            color: const Color(0x6514181B),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -380,7 +379,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                                         .bodyMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFFECECEC),
                                           width: 1.0,
                                         ),
@@ -415,7 +414,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               14.0, 22.0, 14.0, 22.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -446,7 +445,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                               Opacity(
                                 opacity: 0.4,
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: Text(
                                     'Password',
@@ -466,7 +465,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                   ),
                                 ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
                                   controller: _model.textController3,
@@ -483,7 +482,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
-                                          color: Color(0x6514181B),
+                                          color: const Color(0x6514181B),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
@@ -493,7 +492,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                                       .bodyMediumFamily),
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFECECEC),
                                         width: 1.0,
                                       ),
@@ -524,7 +523,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
+                                        const EdgeInsetsDirectional.fromSTEB(
                                             14.0, 22.0, 14.0, 22.0),
                                     suffixIcon: InkWell(
                                       onTap: () => safeSetState(
@@ -560,14 +559,14 @@ class _RegisterWidgetState extends State<RegisterWidget>
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation3']!),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
                                   'Homepage',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 200),
@@ -579,9 +578,9 @@ class _RegisterWidgetState extends State<RegisterWidget>
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 60.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -597,7 +596,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                                   .titleMediumFamily),
                                     ),
                                 elevation: 0.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -621,16 +620,16 @@ class _RegisterWidgetState extends State<RegisterWidget>
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
-                      child: Container(
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                      child: SizedBox(
                         height: 20.0,
                         child: Stack(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           children: [
                             Container(
                               width: double.infinity,
                               height: 1.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0x2E000000),
                               ),
                             ),
@@ -641,7 +640,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                               ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Opacity(
                                 opacity: 0.2,
                                 child: Text(
@@ -669,7 +668,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Container(
                         width: double.infinity,
                         height: 60.0,
@@ -678,7 +677,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                               FlutterFlowTheme.of(context).secondaryBackground,
                           borderRadius: BorderRadius.circular(12.0),
                           border: Border.all(
-                            color: Color(0xFFECECEC),
+                            color: const Color(0xFFECECEC),
                             width: 1.0,
                           ),
                         ),
@@ -687,7 +686,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 12.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
@@ -725,7 +724,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(12.0),
                         border: Border.all(
-                          color: Color(0xFFECECEC),
+                          color: const Color(0xFFECECEC),
                           width: 1.0,
                         ),
                       ),
@@ -734,7 +733,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
@@ -772,7 +771,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
-                  alignment: AlignmentDirectional(0.0, 1.0),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -821,7 +820,7 @@ class _RegisterWidgetState extends State<RegisterWidget>
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
                 ),
               ),
