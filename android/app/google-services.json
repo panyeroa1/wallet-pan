@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "499459179904",
+    "firebase_url": "https://wallet-im2xad-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wallet-im2xad",
+    "storage_bucket": "wallet-im2xad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499459179904:android:247086fe04d73638532d65",
+        "android_client_info": {
+          "package_name": "com.panyerowallet.io"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFe0JLmVd5b9C9DCnE6qDpbI_HUyEAzw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
